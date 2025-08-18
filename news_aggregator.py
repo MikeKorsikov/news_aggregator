@@ -54,7 +54,7 @@ class NewsAggregator:
         
         # News API configuration
         self.news_base_url = "https://newsapi.org/v2"
-        self.categories = ["business", "technology", "general"]
+        self.categories = ["business", "technology", "consumer goods"]
         
     def fetch_news_articles(self, limit: int = 20) -> List[NewsArticle]:
         """Fetch latest news articles from NewsAPI"""
@@ -226,7 +226,7 @@ def main():
     
     # Schedule news updates
     # Run every 4 hours
-    schedule.every(4).hours.do(aggregator.run_news_update)
+    schedule.every(12).hours.do(aggregator.run_news_update)
     
     # Run immediately on startup
     print("News Aggregator Starting...")
