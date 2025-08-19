@@ -246,5 +246,6 @@ def main():
         print("\nNews Aggregator stopped.")
         logging.info("News Aggregator stopped by user")
 
+
 if __name__ == "__main__":
     main()
